@@ -44,65 +44,55 @@ disproportionate first-day success.
  • Before loading the dataset i have cleaned the data & starts DATA VALIDATION by looking in to view tab & checking the column profile,column quality,column distribution,show white space,monospaced to figure out the data redundancy,Replacing null & blank,Replacing special character in prefix,date format,data type transformation.
   
   #### Data Validation
-  ----------------------------------------------------
-  ----------------------------------------------------
+   ----------------------------------------------------
   
   ![Data Validation](https://github.com/kalaishann/power-query-data-cleaning/blob/b97d28aca71a26afdf083d010238c0bc17e80516/Data%20Validation.png)
 
  #### Replacing Special character
- -----------------------------------------------------
- -----------------------------------------------------
+  -----------------------------------------------------
  ![Replacing Special character](https://github.com/kalaishann/power-query-data-cleaning/blob/b9c4abb5a7633c4743bc262d8bbb2aa5d8fa0a1b/Replacing%20Values.png)
 
  #### Finding Blanks
  -----------------------------------------------------
- -----------------------------------------------------
-  
  ![Finding Blanks](https://github.com/kalaishann/power-query-data-cleaning/blob/b9c4abb5a7633c4743bc262d8bbb2aa5d8fa0a1b/Replacing%20Blanks.png)
 
  ![Replacing blanks with Zero](https://github.com/kalaishann/power-query-data-cleaning/blob/b9c4abb5a7633c4743bc262d8bbb2aa5d8fa0a1b/Replacing%20blank%20with%20zero.png)
 
  #### Finding Duplicates 
  ------------------------------------------------------
- ------------------------------------------------------
- ![Data Redundancy](https://github.com/kalaishann/power-query-data-cleaning/blob/b9c4abb5a7633c4743bc262d8bbb2aa5d8fa0a1b/Removing%20White%20Space.png)
+  ![Data Redundancy](https://github.com/kalaishann/power-query-data-cleaning/blob/b9c4abb5a7633c4743bc262d8bbb2aa5d8fa0a1b/Removing%20White%20Space.png)
 
  ![2 Distinct value in to 1 unique value](https://github.com/kalaishann/power-query-data-cleaning/blob/b9c4abb5a7633c4743bc262d8bbb2aa5d8fa0a1b/2%20Distinct%20value%20in%20to%201%20unique%20value.png)
 
 #### Using Trim to remove prefix & suffix space   
---------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------
   ![Trim](https://github.com/kalaishann/power-query-data-cleaning/blob/b9c4abb5a7633c4743bc262d8bbb2aa5d8fa0a1b/Using%20Trim%20to%20remove%20space%20in%20prefix%20and%20suffix.png)
  
  • In power view - I have created DATE MASTER TABLE with year,Quarter,Month Nmae,Days of the week for TIME INTELLIGENCE FUNCTION.
 
  #### Date Master Table
 ---------------------------------------------------
----------------------------------------------------
 
   ![ Date Master Table](https://github.com/kalaishann/power-query-data-cleaning/blob/333efd012bb9a03ec3c244ae52a9826962061e3c/Date%20Master%20Table.png)
 
 • I have created KEY MEASURES TABLE to keep all new measures.
  - Total budget
- ----------------------------------------------------
-    TOTAL BUDGET = SUM(Boxoffice_Fact[Budget in Crores])
+
+        TOTAL BUDGET = SUM(Boxoffice_Fact[Budget in Crores])
 
  - WorldWide collection
------------------------------------------------------
- ----------------------------------------------------
-    WORLD WIDE COLLECTION = SUM(Boxoffice_Fact[Worldwide Collection  in Crores])
+
+        WORLD WIDE COLLECTION = SUM(Boxoffice_Fact[Worldwide Collection  in Crores])
 
  - First Day Collection
- ----------------------------------------------------
- ----------------------------------------------------
-    FIRST DAY COLLECTION = SUM(Boxoffice_Fact[First Day Collection Worldwide  in Crores]) 
+ 
+       FIRST DAY COLLECTION = SUM(Boxoffice_Fact[First Day Collection Worldwide  in Crores]) 
 
  - India Gross Collection
-  ---------------------------------------------------
-  ---------------------------------------------------
-    INDIA GROSS COLLECTION = SUM(Boxoffice_Fact[India Gross Collection in Crores]) 
+ 
+       INDIA GROSS COLLECTION = SUM(Boxoffice_Fact[India Gross Collection in Crores]) 
 
  - Average IMDB rating
-  ---------------------------------------------------
-  ---------------------------------------------------
-    AVG IMDB RATING = AVERAGE(Boxoffice_Fact[IMDb Rating])
+
+        AVG IMDB RATING = AVERAGE(Boxoffice_Fact[IMDb Rating])
 
